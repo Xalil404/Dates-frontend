@@ -1,7 +1,7 @@
 // src/services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/api/'; // Change this to your deployed backend URL when ready
+const API_URL = 'https://birthdates-backend-324e87abe531.herokuapp.com/api/'; // Change this to your deployed backend URL when ready
 
 export const getBirthdays = () => axios.get(`${API_URL}birthdays/`);
 export const getAnniversaries = () => axios.get(`${API_URL}anniversaries/`);
