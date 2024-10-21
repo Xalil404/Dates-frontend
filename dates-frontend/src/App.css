@@ -51,4 +51,12 @@ body {
 
 .nav-link:hover {
   background-color: #e2e6ea; /* Light gray on hover */
+  border-radius: 15px;
 }
+
+.divider {
+  border: none; /* Remove default border */
+  border-top: 2px solid #000000; /* Adjust color and thickness as needed */
+  margin: 5px 0; /* Space above and below the divider */
+}
+
