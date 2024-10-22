@@ -77,8 +77,9 @@ const Birthday = () => {
           <button onClick={handleCreate} className="btn btn-primary w-100">Add Birthday</button>
         </div>
       </div>
+
       {/* Empty State */}
-    {birthdays.length === 0 ? (
+      {birthdays.length === 0 ? (
         <div className="text-center">
           <p><strong>No birthdays added yet.</strong></p>
           <p>Click the button above to add your first birthday!</p>
@@ -89,24 +90,23 @@ const Birthday = () => {
             style={{ width: '450px' }} // Optional: Adjust the size of the image
           />
         </div>
-    ) : (
-
-      <div className="row">
-        {birthdays.map((birthday) => (
-          <div className="col-md-4 mb-3" key={birthday.id}>
-            <div className="card" style={{ backgroundColor: '#F8F7F5' }}>
-              <div className="card-body text-center">
-                <h5 className="card-title">{birthday.name}</h5>
-                <p className="card-text">{birthday.birthdate}</p>
-                <div class="d-flex justify-content-between">
-                <button onClick={() => openEditModal(birthday)} className="btn btn-warning">Edit</button>
-                <button onClick={() => openDeleteModal(birthday.id)} className="btn btn-danger">Delete</button>
+      ) : (
+        <div className="row">
+          {birthdays.map((birthday) => (
+            <div className="col-md-4 mb-3" key={birthday.id}>
+              <div className="card" style={{ backgroundColor: '#F8F7F5' }}>
+                <div className="card-body text-center">
+                  <h5 className="card-title">{birthday.name}</h5>
+                  <p className="card-text">{birthday.birthdate}</p>
+                  <div className="d-flex justify-content-between">
+                    <button onClick={() => openEditModal(birthday)} className="btn btn-warning">Edit</button>
+                    <button onClick={() => openDeleteModal(birthday.id)} className="btn btn-danger">Delete</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       )}
 
       {/* Edit Birthday Modal */}

@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+
 import Birthday from './components/Birthday';
 import Anniversary from './components/Anniversary';
 import Holiday from './components/Holiday';
@@ -80,6 +81,7 @@ const App = () => {
           )}
 
           <Routes>
+            
             <Route path="/birthdays" element={<Birthday />} />
             <Route path="/anniversaries" element={<Anniversary />} />
             <Route path="/holidays" element={<Holiday />} />
@@ -98,5 +100,4 @@ const Main = () => (
 );
 
 export default Main;
-
 
